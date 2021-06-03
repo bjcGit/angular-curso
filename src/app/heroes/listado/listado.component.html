@@ -1,0 +1,16 @@
+<h1> Guerreros Z</h1>
+<div *ngIf="borrado; else noBorrado">
+
+    <h3>Guerrero Borrado : <small>{{borrado}}</small></h3>
+
+</div>
+<ng-template #noBorrado>
+    <h3>No hay guerreros borrados</h3>
+</ng-template>
+
+<button (click)="borrarGuerrero()">Borrar Guerrero</button>
+<ul>
+    <li *ngFor="let guerrero of guerreros; let i = index">
+        {{i + 1}} - {{guerrero}}
+    </li>
+</ul>
