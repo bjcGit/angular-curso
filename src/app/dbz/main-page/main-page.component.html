@@ -1,0 +1,18 @@
+<h1>Guerreros Z</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <app-personaje [personajes]="personajes"></app-personaje>
+        <!-- <h3>Guerreros agregados</h3>
+        <hr>
+        <ul>
+            <li *ngFor="let personaje of personaje">
+                {{personaje.nombre}} - {{personaje.poder | number}}
+            </li>
+        </ul> -->
+    </div>
+    <div class="col">
+        <app-agregar [nuevo]="nuevo" (onNuevoPersonaje)="agregarNuevoPersonaje ( $event)"></app-agregar>
+    </div>
+</div>
