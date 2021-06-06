@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbz.service';
 
 
 @Component({
@@ -31,5 +32,7 @@ export class MainPageComponent  {
   cambiarNombre( event : any){
     console.log(event.target.value);
   }
+
+  constructor( private dbzservice: DbzService ) {}
 
 }
